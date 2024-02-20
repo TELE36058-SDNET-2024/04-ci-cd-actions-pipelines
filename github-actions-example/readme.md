@@ -46,7 +46,7 @@ jobs:
       run: python -m pip install ansible
 
     - name: Execute Ping Playbook
-      run: ansible-playbook ansible/ping.yml -i ansible/inventory
+      run: ansible-playbook ping.yml -i inventory
 ```
 
 
