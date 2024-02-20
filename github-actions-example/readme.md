@@ -26,6 +26,8 @@ name: Ansible Ping Playbook
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'ansible/**'
       - '.github/workflows/ansible-ping.yml'
@@ -46,7 +48,8 @@ jobs:
       run: python -m pip install ansible
 
     - name: Execute Ping Playbook
-      run: ansible-playbook ping.yml -i inventory
+      run: ansible-playbook ansible/ping.yml -i ansible/inventory
+
 ```
 
 
